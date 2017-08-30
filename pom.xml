@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>Employee</name>
-	<description>Inventory Microservice</description>
+	<description>Employee Microservice</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -19,10 +19,8 @@
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
 		<java.version>1.8</java.version>
-		<docker.image.prefix>pes</docker.image.prefix>
 		<slf4j.version>1.7.21</slf4j.version>
 		<spring.data.jpa.version>1.8.0.RELEASE</spring.data.jpa.version>
 		<hibernate.version>4.3.11.Final</hibernate.version>
@@ -40,18 +38,6 @@
 	</dependency>
 	
 
-	 <!-- <dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-config-monitor</artifactId>
-		<version>1.1.0.RELEASE</version>
-	</dependency>
-
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
-		<version>1.1.1.RELEASE</version>
-	</dependency>  -->
-	
 	<dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
@@ -121,22 +107,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.11</version>
-                <configuration>
-                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
-            </plugin>
+			
 		</plugins>
 	</build>
 
