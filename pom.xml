@@ -84,6 +84,13 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-config</artifactId>
 			  </dependency>
+			  
+			  <dependency>
+						<groupId>org.wildfly.plugins</groupId>
+						<artifactId>wildfly-maven-plugin</artifactId>
+						<version>1.2.0.Final</version>
+						<type>maven-plugin</type>
+				</dependency>
 	
 		 
 	</dependencies>
