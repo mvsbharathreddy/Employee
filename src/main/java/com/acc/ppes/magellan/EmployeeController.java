@@ -37,6 +37,7 @@ public class EmployeeController {
 	})
 	 @RequestMapping(method = RequestMethod.GET)
 	    public @ResponseBody String index(){
+			 System.out.println("we are in Get method------------");
 	            return "Welcome to APP PES Employee API";
 
 	    }
@@ -53,6 +54,7 @@ public class EmployeeController {
 		Collection<Employee> emp = employeeService.getAllEmployee();
 		ResponseEntity<Collection<Employee>> responseObj = new ResponseEntity<>(emp, HttpStatus.OK);
 	    logger.info("HTTP status code-->"+responseObj.toString());
+		 System.out.println("HTTP status code-->"+responseObj.toString());
 	    return responseObj;	
 		//return emp;
 			
@@ -71,6 +73,7 @@ public class EmployeeController {
 		employeeService.saveEmployee(employee);
 		ResponseEntity<Employee> responseObj = new ResponseEntity<>(employee, HttpStatus.CREATED);
 	    logger.info("HTTP Response-->"+responseObj.toString());
+		 System.out.println("HTTP status code-->"+responseObj.toString());
 	    return responseObj;	
 		//return employee;
 
@@ -80,7 +83,7 @@ public class EmployeeController {
 
 				ResponseEntity<Employee> responseObj = new ResponseEntity<>(employee, HttpStatus.SERVICE_UNAVAILABLE);
 	    logger.info("HTTP Response-->"+responseObj.toString());
-	  
+	   System.out.println("HTTP status code-->"+responseObj.toString());
 	    return responseObj;	
 		//
 	}
@@ -89,7 +92,7 @@ public class EmployeeController {
 
 				ResponseEntity<Employee> responseObj = new ResponseEntity<>(employee, HttpStatus.NOT_FOUND);
 	    logger.info("HTTP Response-->"+responseObj.toString());
-	  
+	   System.out.println("HTTP status code-->"+responseObj.toString());
 	    return responseObj;	
 		
 	}
