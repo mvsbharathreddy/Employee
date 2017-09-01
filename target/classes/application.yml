@@ -28,7 +28,7 @@ dead:
             name: deadLetterQueue
 
 server:
-  port : 5020
+  port : 7020
 
 queue:
   name : microserviceAppQueue
