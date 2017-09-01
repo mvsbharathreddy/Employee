@@ -83,7 +83,10 @@ public class EmployeeController {
 
 				ResponseEntity<Employee> responseObj = new ResponseEntity<>(employee, HttpStatus.SERVICE_UNAVAILABLE);
 	    logger.info("HTTP Response-->"+responseObj.toString());
-	   System.out.println("HTTP status code-->"+responseObj.toString());
+	    logger.info("deleting---------------------------------");
+	    System.out.println("we are here -----------------------------");
+	    logger.info("HTTP Response------------------->");
+	    System.out.println("HTTP status code-->"+responseObj.toString());
 	    return responseObj;	
 		//
 	}
