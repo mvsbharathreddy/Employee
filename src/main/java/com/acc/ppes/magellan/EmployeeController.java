@@ -74,7 +74,7 @@ public class EmployeeController {
 		ResponseEntity<Employee> responseObj = new ResponseEntity<>(employee, HttpStatus.CREATED);
 	    logger.info("HTTP Response-->"+responseObj.toString());
 		 System.out.println("HTTP status code-->"+responseObj.toString());
-	    return responseObj;	
+	    return responseObj;	 
 		//return employee;
 
 	}
